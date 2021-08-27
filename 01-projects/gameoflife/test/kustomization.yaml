@@ -1,0 +1,26 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# All resources will be in dev-gameoflife namespace.
+namespace: gameoflife-test
+
+# Gather common infrastructure and application resources.
+
+# Include developer RoleBinding for the dev project.
+resources:
+- ../base/01-kafka
+- ../base/02-decisions
+- ../base/03-supervisor
+- ../base/04-web-ui
+
+# Use the "dev" floating image tags.
+images:
+- name: decisions
+  newName: image-registry.openshift-image-registry.svc:5000/gameoflife-cicd/decisions
+  newTag: test
+- name: supervisor
+  newName: image-registry.openshift-image-registry.svc:5000/gameoflife-cicd/supervisor-app
+  newTag: test
+- name: web-ui
+  newName: image-registry.openshift-image-registry.svc:5000/gameoflife-cicd/web-ui-app
+  newTag: test

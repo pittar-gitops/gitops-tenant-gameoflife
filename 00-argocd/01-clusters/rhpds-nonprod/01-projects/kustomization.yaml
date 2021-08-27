@@ -1,0 +1,13 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+namespace: developer-gitops
+
+bases:
+  # List of Projects for this tenant in this cluster.
+  - ../../../02-projects/gameoflife/cicd
+  - ../../../02-projects/gameoflife/dev
+  - ../../../02-projects/gameoflife/test
+
+resources:
+  - projects-project.yaml

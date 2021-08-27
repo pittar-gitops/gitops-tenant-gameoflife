@@ -1,0 +1,19 @@
+kind: Application
+apiVersion: argoproj.io/v1alpha1
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+  name: gameoflife-cicd
+spec:
+  destination:
+    namespace: gameoflife-cicd
+    server: https://kubernetes.default.svc
+  project: gameoflife-projects-project
+  source:
+    path: 01-projects/gameoflife/cicd
+    repoURL: https://github.com/pittar-gitops/gitops-tenant-gameoflife.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true

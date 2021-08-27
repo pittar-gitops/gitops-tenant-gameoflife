@@ -1,0 +1,18 @@
+namespace: gameoflife-cicd
+
+bases:
+  - ../00-cicd/00-rbac
+  - 01-decisions
+  - 02-supervisor
+  - 03-web-ui
+
+resources:
+  - 01-cicd-role-bindings.yaml
+
+patchesJson6902:
+  - target:
+      group: rbac.authorization.k8s.io
+      version: v1
+      kind: RoleBinding
+      name: cicd-image-puller
+    path: 01-cicd-role-binding-patch.yaml

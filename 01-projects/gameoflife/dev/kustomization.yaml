@@ -16,8 +16,8 @@ resources:
 # Use the "dev" floating image tags.
 images:
 - name: decisions
-  newName: quay.io/pittar/decisions
-  newTag: "1.0"
+  newName: image-registry.openshift-image-registry.svc:5000/gameoflife-cicd/decisions
+  newTag: dev
 - name: supervisor
   newName: image-registry.openshift-image-registry.svc:5000/gameoflife-cicd/supervisor-app
   newTag: dev

@@ -8,7 +8,7 @@ spec:
   destination:
     namespace: developer-gitops
     server: https://kubernetes.default.svc
-  project: gameoflife-bootstrap
+  project: tenant-gameoflife-bootstrap
   source:
     path: 00-argocd/01-clusters/rhpds-nonprod/01-projects
     repoURL: https://github.com/pittar-gitops/gitops-tenant-gameoflife.git

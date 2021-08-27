@@ -8,7 +8,7 @@ spec:
   destination:
     namespace: gameoflife-prod
     server: https://kubernetes.default.svc
-  project: devteam1-projects-project
+  project: gameoflife-projects-project
   source:
     path: 01-projects/gameoflife/prod
     repoURL: https://github.com/pittar-gitops/gitops-tenant-gameoflife.git

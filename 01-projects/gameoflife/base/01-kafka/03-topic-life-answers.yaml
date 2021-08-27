@@ -1,10 +1,10 @@
-apiVersion: kafka.strimzi.io/v1beta1
+apiVersion: kafka.strimzi.io/v1beta2
 kind: KafkaTopic
 metadata:
   labels:
     strimzi.io/cluster: gol-cluster
   name: life-answers
 spec:
-  partitions: 1
-  replicas: 1
+  partitions: 10
+  replicas: 3
   topicName: life-answers

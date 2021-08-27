@@ -16,7 +16,7 @@ resources:
 # Use the "dev" floating image tags.
 images:
 - name: decisions
-  newName: image-registry.openshift-image-registry.svc:5000/gameoflife-cicd/decisions
+  newName: image-registry.openshift-image-registry.svc:5000/gameoflife-cicd/decisions-app
   newTag: dev
 - name: supervisor
   newName: image-registry.openshift-image-registry.svc:5000/gameoflife-cicd/supervisor-app

@@ -1,6 +1,7 @@
 namespace: gameoflife-cicd
 
 bases:
+  - ../base/00-cicd/02-custom-tasks
   - 01-decisions
   - 02-supervisor
   - 03-web-ui

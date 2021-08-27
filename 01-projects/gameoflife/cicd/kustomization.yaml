@@ -5,3 +5,4 @@ bases:
   - 01-decisions
   - 02-supervisor
   - 03-web-ui
+  - 04-config

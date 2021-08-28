@@ -5,9 +5,9 @@ namespace: developer-gitops
 
 bases:
   # List of Projects for this tenant in this cluster.
-  - ../../../02-projects/gameoflife/cicd
-  - ../../../02-projects/gameoflife/dev
-  - ../../../02-projects/gameoflife/test
+  - ../../../02-namespaces/gameoflife-cicd
+  - ../../../02-namespaces/gameoflife-dev
+  - ../../../02-namespaces/gameoflife-test
 
 resources:
   - projects-project.yaml

@@ -3,14 +3,18 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
-  name: gameoflife-prod
+  labels:
+    tenant: gameoflife
+    argocd.applicaion/type: namespace
+    namespace.env: cicd
+  name: gameoflife-cicd
 spec:
   destination:
-    namespace: gameoflife-prod
+    namespace: gameoflife-cicd
     server: https://kubernetes.default.svc
-  project: gameoflife-projects-project
+  project: gameoflife-namespaces
   source:
-    path: 01-projects/gameoflife/prod
+    path: 01-namespaces/gameoflife-cicd
     repoURL: https://github.com/pittar-gitops/gitops-tenant-gameoflife.git
     targetRevision: main
   syncPolicy:

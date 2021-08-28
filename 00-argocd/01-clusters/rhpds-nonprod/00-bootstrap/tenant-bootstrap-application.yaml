@@ -3,6 +3,9 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
+  labels:
+    tenant: gameoflife
+    project.type: tenant-bootstrap
   name: tenant-gameoflife-bootstrap
 spec:
   destination:
@@ -10,7 +13,7 @@ spec:
     server: https://kubernetes.default.svc
   project: tenant-gameoflife-bootstrap
   source:
-    path: 00-argocd/01-clusters/rhpds-nonprod/01-projects
+    path: 00-argocd/01-clusters/rhpds-nonprod/01-namespaces
     repoURL: https://github.com/pittar-gitops/gitops-tenant-gameoflife.git
     targetRevision: main
   syncPolicy:

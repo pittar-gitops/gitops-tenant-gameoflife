@@ -3,6 +3,9 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
+  labels:
+    tenant: gameoflife
+    project.type: tenant-bootstrap
   name: tenant-gameoflife-bootstrap
 spec:
   clusterResourceWhitelist:

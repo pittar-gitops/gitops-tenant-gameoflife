@@ -3,7 +3,10 @@ apiVersion: argoproj.io/v1alpha1
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
-  name: gameoflife-projects-project
+  labels:
+    tenant: gameoflife
+    project.type: namespaces
+  name: gameoflife-namespaces
 spec:
   clusterResourceWhitelist:
   - group: '*'

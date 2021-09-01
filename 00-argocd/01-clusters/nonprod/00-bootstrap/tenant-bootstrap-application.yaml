@@ -13,7 +13,7 @@ spec:
     server: https://kubernetes.default.svc
   project: tenant-gameoflife-bootstrap
   source:
-    path: 00-argocd/01-clusters/rhpds-nonprod/01-namespaces
+    path: 00-argocd/01-clusters/nonprod/01-namespaces
     repoURL: https://github.com/pittar-gitops/gitops-tenant-gameoflife.git
     targetRevision: main
   syncPolicy:

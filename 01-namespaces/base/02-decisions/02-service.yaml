@@ -6,6 +6,7 @@ metadata:
     app.kubernetes.io/component: decisions
     app.kubernetes.io/instance: decisions
     app.kubernetes.io/part-of: gameoflife
+    prometheus-metrics: 'true'
   name: decisions
 spec:
   ports:

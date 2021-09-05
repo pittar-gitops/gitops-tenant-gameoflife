@@ -6,6 +6,7 @@ metadata:
     app.kubernetes.io/component: supervisor
     app.kubernetes.io/instance: supervisor
     app.kubernetes.io/part-of: gameoflife
+    prometheus-metrics: 'true'
   name: supervisor
 spec:
   ports:

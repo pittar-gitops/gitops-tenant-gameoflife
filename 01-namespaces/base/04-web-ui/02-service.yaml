@@ -6,6 +6,7 @@ metadata:
     app.kubernetes.io/component: web-ui
     app.kubernetes.io/instance: web-ui
     app.kubernetes.io/part-of: gameoflife
+    prometheus-metrics: 'true'
   name: web-ui
 spec:
   ports:

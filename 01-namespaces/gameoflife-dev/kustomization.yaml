@@ -12,6 +12,7 @@ resources:
 - ../base/02-decisions
 - ../base/03-supervisor
 - ../base/04-web-ui
+- ../base/05-monitoring
 
 # Use the "dev" floating image tags.
 images:

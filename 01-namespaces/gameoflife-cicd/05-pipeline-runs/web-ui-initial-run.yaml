@@ -1,9 +1,6 @@
 kind: PipelineRun
 apiVersion: tekton.dev/v1beta1
 metadata:
-  annotations:
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
-    argocd.argoproj.io/sync-options: Prune=false
   name: web-ui-initial-run
 spec:
   pipelineRef:

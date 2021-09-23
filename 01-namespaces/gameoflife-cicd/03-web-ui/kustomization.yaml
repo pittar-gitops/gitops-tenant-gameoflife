@@ -18,6 +18,8 @@ commonLabels:
 
 # Common annotations to add to all resources.
 commonAnnotations:
+  argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+  argocd.argoproj.io/sync-wave: "2"
   app.openshift.io/vcs-ref: main
   app.openshift.io/vcs-uri: https://github.com/pittar-gameoflife/web-ui
 

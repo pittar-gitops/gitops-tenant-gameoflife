@@ -6,3 +6,4 @@ bases:
   - 02-supervisor
   - 03-web-ui
   - 04-config
+  - 05-pipeline-runs

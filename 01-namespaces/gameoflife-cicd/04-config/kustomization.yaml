@@ -18,3 +18,8 @@ configMapGenerator:
   - name: maven-settings-cm
     files:
       - settings.xml
+
+# Common annotations to add to all resources.
+commonAnnotations:
+  argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+  argocd.argoproj.io/sync-wave: "1"

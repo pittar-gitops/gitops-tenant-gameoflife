@@ -1,0 +1,24 @@
+kind: PipelineRun
+apiVersion: tekton.dev/v1beta1
+metadata:
+  annotations:
+    argocd.argoproj.io/compare-options: IgnoreExtraneous
+    argocd.argoproj.io/sync-options: Prune=false
+  name: web-ui-initial-run
+spec:
+  pipelineRef:
+    name: web-ui-build-and-rollout
+  params:
+    - name: "git-url"
+      value: "https://github.com/pittar-gameoflife/web-ui.git"
+    - name: "git-revision"
+      value: "main"
+    - name: "app-name"
+      value: "web-ui"
+  workspaces:
+    - name: shared-workspace
+      persistentVolumeClaim:
+        claimName: web-ui-workspace
+    - name: maven-settings-cm
+      configMap:
+        name: maven-settings-cm

@@ -7,6 +7,6 @@ spec:
     matchLabels:
       prometheus-metrics: "true"
   endpoints:
-  - port: 8080-tcp
-    path: /q/metrics
-    scheme: http
+    - port: 8080-tcp
+      path: /q/metrics
+      scheme: http
